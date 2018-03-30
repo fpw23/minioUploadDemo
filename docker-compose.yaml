@@ -1,0 +1,13 @@
+version: '3.3'
+
+services:
+
+  files:
+    image: minio/minio
+    ports:
+      - 9002:9000
+    container_name: files.minio.test
+    environment:
+      - MINIO_ACCESS_KEY=PAS86XA3D23TYTO4TSVL
+      - MINIO_SECRET_KEY=rGiALsHl237poM95Ix+XEHY+QeiN6L1B1C3BnZY83
+    command: server /data
